@@ -1,0 +1,15 @@
+﻿<Window x:Name="startWindow" x:Class="Bank_3.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank_3"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="200" Width="270" MaxHeight="200" MinHeight="200" MaxWidth="270" MinWidth="270">
+    <Grid>
+        <ComboBox x:Name="EmploeesComboBox" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" Width="188"/>
+        <Label Content="Кто будет работать в системе:" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="188"/>
+        <Button Content="Выбор" HorizontalAlignment="Center" Margin="0,106,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="ButtonОк_Click"/>
+
+    </Grid>
+</Window>

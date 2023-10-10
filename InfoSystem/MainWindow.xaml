@@ -1,0 +1,42 @@
+﻿<Window x:Class="InfoSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfoSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="550">
+    <Window.Resources>
+        <HierarchicalDataTemplate DataType="{x:Type local:Department}" ItemsSource="{Binding Path=CUnits}">
+            <TextBlock Text="{Binding Path=Name}"/>
+        </HierarchicalDataTemplate>
+        <DataTemplate DataType="{x:Type local:Intern}">
+            <TextBlock Text="{Binding Path=JobTitle}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:Worker}">
+            <TextBlock Text="{Binding Path=JobTitle}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:Manager}">
+            <TextBlock Text="{Binding Path=JobTitle}"/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41.004"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TreeView x:Name="CompanyStructureView" Grid.Column="0" Grid.Row="1"/>
+        <Button Content="Случайно" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Center" Click="ButtonRnd_Click"/>
+        <Button Content="Загрузить" HorizontalAlignment="Left" Margin="130,0,0,0" VerticalAlignment="Center"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="230,0,0,0" VerticalAlignment="Center"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Grid.Column="1" Margin="30,0,0,0" VerticalAlignment="Center"/>
+        <Button Content="Обновить" HorizontalAlignment="Left" Grid.Column="1" Margin="130,0,0,0" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="1"/>
+    </Grid>
+</Window>
